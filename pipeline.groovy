@@ -30,6 +30,9 @@ def mvnProfile
 def projectJarFile
 def projectJarFileDbfsPath
 
+/*
+Azure DataBricks script variables
+*/
 def dataBricksInstanceUrl
 def dataBricksAccessToken
 def dataBricksAccessTokenId
