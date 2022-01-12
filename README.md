@@ -28,7 +28,7 @@ This alert and its corresponding report is due to be fired, when the SSL certifi
 
 The green report has an HTML template base that will be dynamically parsed, when the Jenkins job runs and a "Search and Replace" mechanism will ensure that all the template placeholders will be replaced with the required values. A sample screenshot of the green report looks like the following:
 
-<img src="https://github.com/graadi/ssl-certificates-monitor-bash-script/blob/main/images/green-report.png" />
+<img src="" />
 
 ##### 2. Orange alert and report
 
@@ -36,7 +36,7 @@ This alert and its corresponding report is due to be fired, when the SSL certifi
 
 The orange report has an HTML template base that will be dynamically parsed, when the Jenkins job runs and a "Search and Replace" mechanism will ensure that all the template placeholders will be replaced with the required values. A sample screenshot of the green report looks like the following:
 
-<img src="https://github.com/graadi/ssl-certificates-monitor-bash-script/blob/main/images/orange-report.png" />
+<img src="" />
 
 ##### 3. Red alert and report
 
@@ -44,13 +44,13 @@ This alert and its corresponding report is due to be fired, on the day when the 
 
 The red report has an HTML template base that will be dynamically parsed, when the Jenkins job runs and a "Search and Replace" mechanism will ensure that all the template placeholders will be replaced with the required values. A sample screenshot of the green report looks like the following:
 
-<img src="https://github.com/graadi/ssl-certificates-monitor-bash-script/blob/main/images/red-report.png" />
+<img src="" />
 
 ##### 4. Monthly aggregated report
 
 This is an informative alert and email, that will be sent on a monthly basis and it will contain a snapshot of all the existing (that will be found in the configuration folder - the certificates-store) SSL certificates, along with their expiry date. An example of the monthly aggregated report looks like the following:
 
-<img src="https://github.com/graadi/ssl-certificates-monitor-bash-script/blob/main/images/aggregated-report.png" />
+<img src="" />
 
 ### Bash Script and Configuration
 
@@ -67,4 +67,4 @@ The repository has the following structure:
 
 The script uses external tools to inspect and extract SSL certificate details as following: openssl, Java keytool, perl, date, sed and many more. The script follows a procedural approach and has a number of functions where the core operations are implemented and a main one which is the entry point at the execution time. The following diagram will explain the execution flow of the script:
 
-<img src="https://github.com/graadi/ssl-certificates-monitor-bash-script/blob/main/images/bash-script-diagram.png" />
+<img src="" />
