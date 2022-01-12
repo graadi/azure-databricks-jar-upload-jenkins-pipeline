@@ -1,6 +1,6 @@
-pipelineJob("SSL Certificates Monitoring Tool") {
+pipelineJob("Azure DataBricks JAR Upload") {
 
-    description("SSL Certificates Monitoring Tool.")
+    description("Jenkins pipeline to automate the deployment (upload) of a JAR executable file into Azure DataBricks, to be used on DataBricks pipelines processing.")
     
     logRotator {
         
@@ -12,30 +12,24 @@ pipelineJob("SSL Certificates Monitoring Tool") {
 
     parameters {
 
-        stringParam( "JOB_NAME", "SSL CERTS EXPIRY DATE MONITORING TOOL")
-        
-        stringParam( "JOB_GIT_REPOSITORY", "git@github.com:graadi/ssl-certificates-monitor-jenkins-pipeline.git")
-        stringParam( "JOB_GIT_BRANCH", "main")
-        
-        stringParam( "JOB_EMAIL_RECIPIENTS", "graadi@example.com" )
-        stringParam( "JOB_BUILD_EMAIL_RECIPIENTS", "graadi@example.com" )
-        
-        activeChoiceParam('REPORT_FREQUENCY') {
-            description('')
-            filterable()
-            choiceType('SINGLE_SELECT')
-            groovyScript {
-                script('return ["0":"NONE","7":"WEEKLY","14":"FORTHNIGHT","28":"MONTHLY:selected"]')
-                fallbackScript('')
-            }
-        }
+        stringParam( "PROJECT_GIT_REPOSITORY", "git@github.com:graadi/azure-databricks-jar-upload-jenkins-pipeline.git")
+        stringParam( "PROJECT_GIT_BRANCH", "main")
 
-        booleanParam('RESET_BASE_DATE', false, '')
-        booleanParam('RUN_AGGREGATE_REPORT', false, 'Tick this to force a run of the aggregated report.')
+        stringParam("DATABRICKS_INSTANCE_URL", "")
+        stringParam("DATABRICKS_RESOURCE_GROUP_NAME", "")
+        stringParam("DATABRICKS_INSTANCE_NAME", "")
+        stringParam("DATABRICKS_CLUSTER_ID", "")
+        stringParam("DATABRICKS_RESOURCE_ID", "")
+        stringParam("DATABRICKS_DBFS_FILE_ABSOLUTE_PATH", "")
 
-        stringParam( "GREEN_REPORT", "7", "The number of day that should trigger the first renewal warning. \"Green Report\".")
-        stringParam( "ORANGE_REPORT", "5", "The number of day that should trigger the second renewal warning. \"Orange Report\".")
-        stringParam( "RED_REPORT", "0", "The number of day that should trigger the last renewal warning. \"Red Report\". Default value is '0' which means in the day when the certificate expires.")
+        booleanParam("SONAR_CHECK_FLAG", false, '')
+
+        
+        stringParam( "SONAR_SERVER_URL", "" )
+        stringParam( "SONAR_JENKINS_CREDENTIALS", "" )
+
+        stringParam( "MVN_PROFILE", "" )
+        stringParam( "PROJECT_EMAIL_RECIPIENT", "" )
     }
 
     // Define the pipeline script which is located in Git
@@ -46,12 +40,12 @@ pipelineJob("SSL Certificates Monitoring Tool") {
                     branch("master")
                     remote {
                         name("origin")
-                        url("git@github.com:graadi/ssl-certificates-monitor-jenkins-pipeline.git")
+                        url("git@github.com:graadi/azure-databricks-jar-upload-jenkins-pipeline.git")
                     }
                 }
             }
         // The path within source control to the pipeline jobs Jenkins file
-        scriptPath("jenkins-pipeline.groovy")
+        scriptPath("pipeline.groovy")
         }
     }
 }
