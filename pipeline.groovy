@@ -2,9 +2,6 @@
 // Jenkins declarative pipeline for uploading a Java based        //
 // executable Jar file into Azure DataBricks                      //
 // Upload into Azure DataBricks                                   //
-//                                                                //
-// Authors: Adrian Gramada                                        //
-// Date:    Jan 2022                                              //
 // -------------------------------------------------------------- //
 
 /* 
