@@ -6,7 +6,7 @@ The pipeline automates the upload of an executable Java artifact into Azure Data
 
 Azure Databricks comes with a CLI tool that provides a way to interface with resources in Azure Databricks. It’s built on top of the Databricks REST API and can be used with the Workspace, DBFS, Jobs, Clusters, Libraries and Secrets API
 
-In order to install the CLI, you’ll need Python version 2.7.9 and above if you’re using Python 2 or Python 3.6 and above if you’re using Python 3.
+To install the CLI, you’ll need Python version 2.7.9 and above if you’re using Python 2 or Python 3.6 and above if you’re using Python 3.
 
 ```bash
 # Create a virtual environment in which you can install the Databricks CLI.
