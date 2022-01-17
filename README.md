@@ -3,4 +3,22 @@
 <img src="https://github.com/graadi/azure-databricks-jar-upload-jenkins-pipeline/blob/main/images/az-db-logo.jpeg" />
 
 The pipeline automates the upload of an executable Java artifact into Azure DataBricks.
-The pipeline uses Azure Databricks REST API to authenticate and obtain a security token in order to perform the upload.
+
+Azure Databricks comes with a CLI tool that provides a way to interface with resources in Azure Databricks. It’s built on top of the Databricks REST API and can be used with the Workspace, DBFS, Jobs, Clusters, Libraries and Secrets API
+
+In order to install the CLI, you’ll need Python version 2.7.9 and above if you’re using Python 2 or Python 3.6 and above if you’re using Python 3.
+
+```bash
+# Create a virtual environment in which you can install the Databricks CLI.
+virtualenv -p /usr/bin/python2.7 databrickscli
+```
+
+```bash
+# switch to the virtual environment you created.
+source databrickscli/bin/activate
+
+```
+```bash
+# install the Databricks CLI.
+pip install databricks-cli
+```
