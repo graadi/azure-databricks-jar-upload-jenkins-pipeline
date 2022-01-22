@@ -22,4 +22,4 @@ source databrickscli/bin/activate
 # install the Databricks CLI.
 pip install databricks-cli
 ```
-Pipeline stages diagram:
+Pipeline stages diagram as follows:
