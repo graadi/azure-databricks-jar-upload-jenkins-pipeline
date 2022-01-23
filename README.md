@@ -23,3 +23,4 @@ source databrickscli/bin/activate
 pip install databricks-cli
 ```
 Pipeline stages diagram as follows:
+<img src="https://github.com/graadi/azure-databricks-jar-upload-jenkins-pipeline/blob/main/images/export.png" />
