@@ -1,4 +1,4 @@
-# Azure Databricks JAR executable artifact deployment (upload) pipeline
+# Azure Databricks JAR executable artifact deployment pipeline
 
 <img src="https://github.com/graadi/azure-databricks-jar-upload-jenkins-pipeline/blob/main/images/az-db-logo.jpeg" />
 
